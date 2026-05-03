@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/canvascontainer.tsx","./src/components/effects.tsx","./src/components/growthengine.tsx","./src/components/overlayui.tsx","./src/components/particlesystem.tsx","./src/store/usestore.ts"],"version":"5.9.3"}

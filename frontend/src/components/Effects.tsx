@@ -19,7 +19,7 @@ export const Effects: React.FC = () => {
   });
 
   return (
-    <EffectComposer disableNormalPass>
+    <EffectComposer enableNormalPass={false}>
       <Bloom
         luminanceThreshold={0.2}
         luminanceSmoothing={0.9}
@@ -29,6 +29,8 @@ export const Effects: React.FC = () => {
         ref={chromAberRef}
         blendFunction={BlendFunction.NORMAL}
         offset={new THREE.Vector2(0.002, 0.002)}
+        radialModulation={false}
+        modulationOffset={0.0}
       />
       <Noise 
         premultiply 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { CanvasContainer } from './components/CanvasContainer';
 import { OverlayUI } from './components/OverlayUI';
 import gsap from 'gsap';
