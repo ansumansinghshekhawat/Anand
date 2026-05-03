@@ -1,0 +1,49 @@
+.custom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent-color);
+  background: transparent;
+}
+
+.custom-link:hover {
+  background: var(--accent-color);
+  color: var(--bg-color);
+}
+
+.custom-link svg {
+  transition: transform 0.3s ease;
+}
+
+.custom-link:hover svg {
+  transform: translateX(4px);
+}
+
+.glass-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  transform: translateX(-100%) skewX(-15deg);
+  animation: shine 8s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  20% { transform: translateX(100%) skewX(-15deg); }
+  100% { transform: translateX(100%) skewX(-15deg); }
+}

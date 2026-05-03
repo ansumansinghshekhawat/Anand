@@ -1,0 +1,87 @@
+:root {
+  --bg-color: #030303;
+  --text-primary: #e5e5e5;
+  --text-secondary: #888888;
+  --accent-color: #00f0ff;
+  --font-display: 'Cinzel', serif;
+  --font-mono: 'Space Mono', monospace;
+  
+  --spacing-unit: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Base utility classes for UI overlay */
+.overlay-container {
+  position: relative;
+  z-index: 10;
+  pointer-events: none; /* Let clicks pass through to 3D canvas unless on an interactive element */
+}
+
+.interactive {
+  pointer-events: auto;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-large {
+  font-size: clamp(3rem, 8vw, 8rem);
+  line-height: 1.1;
+  mix-blend-mode: exclusion;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  max-width: 600px;
+}
